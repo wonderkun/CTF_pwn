@@ -98,7 +98,7 @@ print("[*] stackAddr:"+ stackAddr)
 ```
 在 `leave` 指令执行之后，又修改了 esp `lea     esp, [ecx-4]` , 所以可以通过修改 `ebp - 4` 的值来控制 `esp`。
 
-但是，要在哪里伪造 fake stack 呢？ 发现题目给了堆地址， 可以把fake 堆的地址伪造到堆上 。 
+但是，要在哪里伪造 fake stack 呢？ 发现题目给了堆地址， 可以把fake 栈的地址伪造到堆上 。 
 
 ```python
 heapAddr = int(r.recv(1024)[27:36],16)
